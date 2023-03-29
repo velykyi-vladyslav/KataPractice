@@ -12,7 +12,7 @@ public class KataApp {
      * @param args ignored
      */
     public static void main(String[] args) {
-
+        System.out.println(isValid("[(])"));
     }
 
     /**
@@ -69,5 +69,36 @@ public class KataApp {
         return map.entrySet().stream()
                 .filter(entry -> entry.getValue() > maxOccurrences)
                 .collect(toMap(Map.Entry::getKey, entry -> entry.getValue() - maxOccurrences));
+    }
+
+    //todo Failed task Valid Braces https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/java
+    /**
+     * Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid.
+     *
+     * This Kata is similar to the Valid Parentheses Kata, but introduces new characters: brackets [], and curly braces {}. Thanks to @arnedag for the idea!
+     *
+     * All input strings will be nonempty, and will only consist of parentheses, brackets and curly braces: ()[]{}.
+     */
+    public static boolean isValid(String braces) {
+        String allBraces = "][{}()";
+        Map<String, Integer> bracesProcessor = new HashMap<>();
+
+        Arrays.stream(braces.split(""))
+                .forEach(s -> bracesProcessor.compute(s, (key, val) -> val == null ? 1 : val + 1));
+
+        int i = 0;
+        while (i < allBraces.length()) {
+            String leftBrace = allBraces.substring(i, ++i);
+            String rightBrace = allBraces.substring(i, ++i);
+
+            Integer countLeft = bracesProcessor.get(leftBrace);
+            Integer countRight = bracesProcessor.get(rightBrace);
+
+            if (!Objects.equals(countLeft, countRight)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
