@@ -1,6 +1,8 @@
 package velykyi.vladyslav.level3;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toMap;
 
@@ -12,7 +14,10 @@ public class KataApp {
      * @param args ignored
      */
     public static void main(String[] args) {
-        System.out.println(isValid("[(])"));
+        for (int i : deleteNth2(new int[]{1, 1, 3, 3, 7, 2, 2, 2, 2}, 3)) {
+            System.out.println(i);
+        }
+        System.out.println(deleteNth2(new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 }, 3 ));
     }
 
     /**
@@ -69,6 +74,37 @@ public class KataApp {
         return map.entrySet().stream()
                 .filter(entry -> entry.getValue() > maxOccurrences)
                 .collect(toMap(Map.Entry::getKey, entry -> entry.getValue() - maxOccurrences));
+    }
+
+
+    /**
+     * Not completed - time is up
+     */
+    public static int[] deleteNth2(int[] elements, int maxOccurrences) {
+        // Треба LinkedList - ordered
+        // треба створити мапу - [1,2,3,1,2,1,2,3] -> {(1-3), (2-3), (3-2)}
+        // Вибрати які елементи видаляти. {(1-3), (2-3), (3-2)} -> {(1-1), (2-1)}
+        //зробитиітерейт по лісту видалити елемент з ліста і з мапи.
+        // повернути масив від лінкед ліста
+
+        LinkedList<Integer> elementList = new LinkedList<>();
+        for (int element : elements) {
+            elementList.add(element);
+        }
+
+        Map<Integer, Integer> occurrencesMap = new HashMap<>();
+        elementList.forEach(el ->
+                occurrencesMap.put(el, occurrencesMap.getOrDefault(el, 0) + 1));
+
+        Map<Integer, Integer> occurrencesToRemove = occurrencesMap.entrySet().stream()
+                .filter(entry -> entry.getValue() <= maxOccurrences).collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+        //todo remove from elementList -> occurrencesToRemove
+
+
+        // Вибрати які елементи видаляти. {(1-3), (2-3), (3-2)} -> {(1-1), (2-1)}
+        //кожний валює по ключу яке < maxOccurences - видалити або скіпнути
+        return Arrays.stream(elements).toArray();
     }
 
     //todo Failed task Valid Braces https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/java
