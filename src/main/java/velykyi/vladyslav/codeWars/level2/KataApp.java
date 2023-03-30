@@ -1,4 +1,4 @@
-package velykyi.vladyslav.level2;
+package velykyi.vladyslav.codeWars.level2;
 
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;

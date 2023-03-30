@@ -1,4 +1,4 @@
-package velykyi.vladyslav.level4;
+package velykyi.vladyslav.codeWars.level7;
 
 @SuppressWarnings("unused")
 public class KataApp {

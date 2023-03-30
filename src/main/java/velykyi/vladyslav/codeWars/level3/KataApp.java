@@ -1,4 +1,4 @@
-package velykyi.vladyslav.level3;
+package velykyi.vladyslav.codeWars.level3;
 
 import java.util.*;
 import java.util.stream.Collectors;
