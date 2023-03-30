@@ -81,30 +81,16 @@ public class KataApp {
      * Not completed - time is up
      */
     public static int[] deleteNth2(int[] elements, int maxOccurrences) {
-        // Треба LinkedList - ordered
-        // треба створити мапу - [1,2,3,1,2,1,2,3] -> {(1-3), (2-3), (3-2)}
-        // Вибрати які елементи видаляти. {(1-3), (2-3), (3-2)} -> {(1-1), (2-1)}
-        //зробитиітерейт по лісту видалити елемент з ліста і з мапи.
-        // повернути масив від лінкед ліста
-
         LinkedList<Integer> elementList = new LinkedList<>();
-        for (int element : elements) {
-            elementList.add(element);
+        Map<Integer, Integer> occurrencesMap = new HashMap<>();
+
+        for (int el : elements) {
+            Integer v = occurrencesMap.put(el, occurrencesMap.getOrDefault(el, 0) + 1);
+            if (v == null || v < maxOccurrences)
+            elementList.add(el);
         }
 
-        Map<Integer, Integer> occurrencesMap = new HashMap<>();
-        elementList.forEach(el ->
-                occurrencesMap.put(el, occurrencesMap.getOrDefault(el, 0) + 1));
-
-        Map<Integer, Integer> occurrencesToRemove = occurrencesMap.entrySet().stream()
-                .filter(entry -> entry.getValue() <= maxOccurrences).collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
-
-        //todo remove from elementList -> occurrencesToRemove
-
-
-        // Вибрати які елементи видаляти. {(1-3), (2-3), (3-2)} -> {(1-1), (2-1)}
-        //кожний валює по ключу яке < maxOccurences - видалити або скіпнути
-        return Arrays.stream(elements).toArray();
+        return elementList.stream().mapToInt(i -> i).toArray();
     }
 
     //todo Failed task Valid Braces https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/java
