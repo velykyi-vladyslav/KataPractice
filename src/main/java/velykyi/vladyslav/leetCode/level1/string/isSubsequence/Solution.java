@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * Leetcode task: <a href="https://leetcode.com/problems/is-subsequence/">is-subsequence</a>
  * Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
  *
  * <p>A subsequence of a string is a new string that is formed from the original string by deleting some (can be none)
