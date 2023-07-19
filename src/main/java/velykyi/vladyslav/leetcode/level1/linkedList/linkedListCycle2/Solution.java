@@ -1,6 +1,6 @@
-package velykyi.vladyslav.leetCode.level1.linkedList.linkedListCycle2;
+package velykyi.vladyslav.leetcode.level1.linkedList.linkedListCycle2;
 
-import velykyi.vladyslav.leetCode.level1.linkedList.ListNode;
+import velykyi.vladyslav.leetcode.level1.linkedList.ListNode;
 
 /**
  * Leetcode task: <a href="https://leetcode.com/problems/linked-list-cycle-ii">linked-list-cycle-II</a>

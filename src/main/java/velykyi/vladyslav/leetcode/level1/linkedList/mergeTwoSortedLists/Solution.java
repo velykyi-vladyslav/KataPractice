@@ -1,7 +1,7 @@
-package velykyi.vladyslav.leetCode.level1.linkedList.mergeTwoSortedLists;
+package velykyi.vladyslav.leetcode.level1.linkedList.mergeTwoSortedLists;
 
 
-import velykyi.vladyslav.leetCode.level1.linkedList.ListNode;
+import velykyi.vladyslav.leetcode.level1.linkedList.ListNode;
 
 /**
  * Leetcode task: <a href="https://leetcode.com/problems/merge-two-sorted-lists">merge-two-sorted-lists</a>

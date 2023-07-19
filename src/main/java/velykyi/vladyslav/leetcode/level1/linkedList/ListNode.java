@@ -1,4 +1,4 @@
-package velykyi.vladyslav.leetCode.level1.linkedList;
+package velykyi.vladyslav.leetcode.level1.linkedList;
 
 /**
  * Definition for singly-linked list.

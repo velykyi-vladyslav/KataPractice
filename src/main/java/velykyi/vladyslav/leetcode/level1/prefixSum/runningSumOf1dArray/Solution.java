@@ -1,4 +1,4 @@
-package velykyi.vladyslav.leetCode.level1.prefixSum.runningSumOf1dArray;
+package velykyi.vladyslav.leetcode.level1.prefixSum.runningSumOf1dArray;
 
 /**
  * Leetcode task: <a href="https://leetcode.com/problems/running-sum-of-1d-array/">running-sum-of-1d-array</a>

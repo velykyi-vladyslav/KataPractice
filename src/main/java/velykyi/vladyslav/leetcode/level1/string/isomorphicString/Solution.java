@@ -1,4 +1,4 @@
-package velykyi.vladyslav.leetCode.level1.string.isomorphicString;
+package velykyi.vladyslav.leetcode.level1.string.isomorphicString;
 
 import java.util.*;
 

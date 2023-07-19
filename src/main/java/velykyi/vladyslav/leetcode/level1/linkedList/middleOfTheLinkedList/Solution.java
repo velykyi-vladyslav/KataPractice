@@ -1,7 +1,7 @@
-package velykyi.vladyslav.leetCode.level1.linkedList.middleOfTheLinkedList;
+package velykyi.vladyslav.leetcode.level1.linkedList.middleOfTheLinkedList;
 
 
-import velykyi.vladyslav.leetCode.level1.linkedList.ListNode;
+import velykyi.vladyslav.leetcode.level1.linkedList.ListNode;
 
 /**
  * Leetcode task: <a href="https://leetcode.com/problems/middle-of-the-linked-list">middle-of-the-linked-list</a>

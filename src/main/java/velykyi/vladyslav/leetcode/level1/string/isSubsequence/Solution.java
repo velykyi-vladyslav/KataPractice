@@ -1,4 +1,4 @@
-package velykyi.vladyslav.leetCode.level1.string.isSubsequence;
+package velykyi.vladyslav.leetcode.level1.string.isSubsequence;
 
 import java.util.HashMap;
 import java.util.LinkedList;

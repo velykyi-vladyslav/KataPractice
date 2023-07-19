@@ -1,6 +1,6 @@
-package velykyi.vladyslav.leetCode.level1.linkedList.reverseLinkedList;
+package velykyi.vladyslav.leetcode.level1.linkedList.reverseLinkedList;
 
-import velykyi.vladyslav.leetCode.level1.linkedList.ListNode;
+import velykyi.vladyslav.leetcode.level1.linkedList.ListNode;
 
 /**
  * Leetcode task: <a href="https://leetcode.com/problems/reverse-linked-list/">reverse-linked-list</a>

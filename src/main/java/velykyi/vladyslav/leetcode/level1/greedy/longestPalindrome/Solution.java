@@ -1,4 +1,4 @@
-package velykyi.vladyslav.leetCode.level1.greedy.longestPalindrome;
+package velykyi.vladyslav.leetcode.level1.greedy.longestPalindrome;
 
 import java.util.HashMap;
 import java.util.Map;

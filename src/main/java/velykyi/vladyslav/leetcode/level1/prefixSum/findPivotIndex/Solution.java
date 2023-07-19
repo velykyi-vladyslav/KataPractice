@@ -1,4 +1,4 @@
-package velykyi.vladyslav.leetCode.level1.prefixSum.findPivotIndex;
+package velykyi.vladyslav.leetcode.level1.prefixSum.findPivotIndex;
 
 /**
  * Leetcode task: <a href="https://leetcode.com/problems/find-pivot-index">find-pivot-index</a>

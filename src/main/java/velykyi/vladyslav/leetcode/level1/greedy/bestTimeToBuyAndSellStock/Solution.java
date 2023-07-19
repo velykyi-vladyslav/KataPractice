@@ -1,4 +1,4 @@
-package velykyi.vladyslav.leetCode.level1.greedy.bestTimeToBuyAndSellStock;
+package velykyi.vladyslav.leetcode.level1.greedy.bestTimeToBuyAndSellStock;
 
 /**
  * Leetcode task: <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">best-time-to-buy-and-sell-stock</a>
